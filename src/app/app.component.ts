@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { LISTS } from './mock/mock-lists';
+import { APPLICANTS } from './mock/mock-applicants';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +10,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo-kanban';
+  lists = LISTS;
+  applicants = APPLICANTS;
 }
