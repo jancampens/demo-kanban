@@ -1,0 +1,54 @@
+.card {
+	display: flex;
+	flex-direction: row;
+	margin: 0 16px 0 16px;
+}
+
+.card-picture {
+	width: 67px;
+	height: 67px;
+	border-radius: 50px;
+	margin: 18px 20px 18px 0;
+}
+
+.card-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.line-1 {
+	margin-bottom: 11px;
+}
+
+.card-name {
+	font-weight: bold;
+	color: #171818;
+	margin-right: 20px;
+}
+
+.card-rating {
+	display: inline-block;
+}
+
+.card-rating-star {
+	fill: #bb9e59;
+	vertical-align: bottom;
+}
+
+.card-rating-text {
+	color: #bb9e59;
+	margin-left: 2px;
+}
+
+.card-age {
+	color: #7d7d7d;
+}
+
+.card-gender {
+	color: #7d7d7d;
+}
+
+.card-city {
+	color: #7d7d7d;
+}

@@ -1,0 +1,22 @@
+<div class="card">
+  <img class="card-picture" [src]="applicant.picture" alt="">
+
+  <div class="card-text">
+    <div class="line-1">
+      <span class="card-name">{{applicant.name}}</span>
+      <div class="card-rating">
+        <svg class="card-rating-star" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 18 18">
+          <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z" />
+          <path fill="none" d="M0 0h18v18H0z" />
+        </svg>
+        <span class="card-rating-text">{{applicant.rating}}</span>
+      </div>
+    </div>
+
+    <div class="line-2">
+      <span class="card-age">{{applicant.age}} y/o - </span>
+      <span class="card-gender">{{applicant.gender}} - </span>
+      <span class="card-city">{{applicant.city}}</span>
+    </div>
+  </div>
+</div>
