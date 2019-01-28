@@ -1,8 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-
-import { List } from '../../models/list';
-
-import { APPLICANTS } from './../../mock/mock-applicants';
+import { Component, OnInit, Input } from '@angular/core';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-list',
@@ -10,13 +7,20 @@ import { APPLICANTS } from './../../mock/mock-applicants';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  @Input() list: List;
-  applicants = APPLICANTS;
-  counter: number;
-
+  @Input() list;
   constructor() { }
 
   ngOnInit() {
-    this.counter = this.applicants.filter(applicant => applicant.list === this.list.id).length;
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
+    }
   }
 }
