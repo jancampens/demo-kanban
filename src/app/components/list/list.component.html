@@ -1,4 +1,4 @@
-<div class="list" cdkDropList [cdkDropListData]="list.applicants" (cdkDropListDropped)="drop($event)" [ngClass]="list.disabled ? 'disabled' : ''">
+<div class="list" cdkDropList [cdkDropListData]="list.applicants" (cdkDropListDropped)="drop($event)" [ngClass]="list.disabled ? 'disabled' : ''" [id]="list.id">
   <div class="list-header" [ngStyle]="{'background': list.color}">
       <span class="list-header-name">{{list.name}}</span>
       <span class="list-header-counter">({{list.applicants.length}})</span>
