@@ -1,4 +1,5 @@
 export class Applicant {
+    id: number;
     name: string;
     rating: number;
     age: number;
