@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { CardComponent } from './components/card/card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     DragDropModule
   ],
   providers: [],
